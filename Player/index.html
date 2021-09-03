@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Custom Video Player</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="windows">
+                <video class="video active" src="video/Lake.mp4"></video>
+                <video class="video" src="video/Bird.mp4"></video>
+                <video class="video" src="video/Frogs.mp4"></video>
+                <video class="video" src="video/Woodpecker.mp4"></video>
+            </div>   
+            
+            <div class="controls">
+                <div class="line-box">
+                    <div class="line"></div>
+                </div>           
+                <div class="buttons">
+                    <button class="backward">
+                        <em class="fas fa-step-backward"></em>
+                    </button>
+                    <button class="stop">
+                        <em class="far fa-stop-circle"></em>
+                    </button>
+                    <button class="toggle">
+                        <em class="far fa-play-circle"></em>
+                    </button>                       
+                    <input class="progress-speed" type="range" value="1" min="0.25" max="3" step="0.25" />
+                    <span class="volume">
+                        <button class="sound">
+                            <em class="fas fa-volume-up"></em>
+                        </button>
+                        <input class="progress-sound" type="range" value="1" min="0" max="1" step="0.01" /> 
+                    </span>
+                    <button class="screen">
+                        <em class="fas fa-expand"></em>
+                    </button> 
+                    <div class="time">
+                        <span class="current">0:00</span>/<span class="duration">0:00</span>
+                    </div>
+                    <button class="forward">
+                        <em class="fas fa-step-forward"></em>
+                    </button> 
+                </div> 
+            </div> 
+            </div>
+        </div>
+    </div>
+         
+   
+    
+
+
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

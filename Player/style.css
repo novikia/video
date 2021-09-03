@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(30, 135, 255);
+  width: 100wh;
+  height: 100vh;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.wrapper:hover .controls {
+  transform: translateY(0);
+}
+
+.video {
+  width: 100%;
+  display: none;
+  animation: 1s ease-in-out;
+}
+/*------------------------------------------------------------------------*/
+.active,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+/*------------------------------------------------------------------------*/
+.controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%) translateY(-10px);
+  transition: 1s;
+}
+
+.line-box {
+  background-color: darkgrey;
+  cursor: pointer;
+}
+
+.line {
+  height: 10px;
+  background-color: rgb(230, 105, 105);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0;
+  background-color: yellowgreen;
+}
+
+button {
+  cursor: pointer;
+  font-size: 35px;
+  background-color: transparent;
+}
+
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.sound {
+  width: 20px;
+}
+
+.current {
+  display: inline-block;
+  width: 30px;
+}
+
+input {
+  background: linear-gradient(
+    to right,
+    rgb(230, 105, 105) 100%,
+    rgb(169, 169, 169) 0%
+  );
+  height: 10px;
+  -webkit-appearance: none;
+  border-radius: 10px;
+}
+
+input::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #000000;
+}
+
+.progress-speed {
+  background: rgb(0, 0, 0);
+}
+
+.progress-speed::-webkit-slider-thumb {
+  background: rgb(230, 105, 105);
+}
